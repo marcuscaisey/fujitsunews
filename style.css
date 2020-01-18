@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Basier;
+  src: url('fonts/BasierSquare-Regular.otf');
+}
+
+@font-face {
+  font-family: Klavika;
+  src: url('fonts/Klavika\ Regular.otf');
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  background-color: #ff0000;
+  font-family: Klavika;
+  color: #ffffff;
+}
+
+#header h1 {
+  margin: auto;
+  font-size: 4em;
+  text-align: center;
+}
+
+#menu {
+  margin: auto;
+  display: flex;
+  background-color: #ff0000;
+}
+
+#menu a {
+  margin: 0 1vw;
+  font-family: Klavika;
+  font-size: 2em;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#menu a.inactive:hover,
+#menu a.active:link,
+#menu a.active:visited,
+#menu a.active:active,
+#menu a.active:hover {
+  color: #bbbbbb;
+}
+
+#stories {
+  display: flex;
+  margin: 3vh 3vh 0;
+}
+
+#main-story {
+  display: flex;
+  flex: 0 0 35vw;
+  margin-right: 1vw;
+}
+
+#side-stories {
+  display: grid;
+  grid-gap: 1vh;
+  grid-template-columns: repeat(3, 1fr);
+  flex-grow: 1;
+  font-size: 0.8em;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  font-weight: bold;
+}
+
+#main-story .title {
+  font-size: 1.5em;
+  margin: 1vh 0;
+}
+
+#side-stories .title {
+  font-size: 1.2em;
+  margin: 0.8vh 0;
+}

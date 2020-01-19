@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title>Fujitsu News - Contact</title>
+
+  <script src="jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      $("#contact-form").submit(event => {
+        let nameInput = $("#contact-form #name");
+        let emailInput = $("#contact-form #email");
+        let messageInput = $("#contact-form #message");
+
+        let data = {
+          name: nameInput.val(),
+          email: emailInput.val(),
+          message: messageInput.val()
+        }
+
+        nameInput.val("");
+        emailInput.val("");
+        messageInput.val("");
+
+        $.post("http://localhost/contact", data, null);
+        return false;
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="header">
+    <span id="title">Fujitsu News</span>
+    <nav id="menu">
+      <a class="inactive" href="index.html">Home</a>
+      <a class="inactive" href="videos.html">Videos</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <div id="contact-content">
+    <div id="contact-details">
+      Got a question? We'd love to hear from you. Please write to our address, give us a call, or send a message using
+      our contact
+      form.
+
+      <div id="address">
+        <b>Address:</b><br>
+        <address>
+          Address
+          Fujitsu Services<br>
+          Jays Close<br>
+          Viables Industrial Estate<br>
+          Basingstoke<br>
+          RG22 4BY<br>
+        </address>
+      </div>
+
+      <div id="phone">
+        <b>Phone:</b><br>
+        <address>0843 354 5555</address>
+      </div>
+
+      <form id="contact-form">
+        Name:<br>
+        <input id="name" type="text" name="name"><br>
+        Email Address:<br>
+        <input id="email" type="text" name="email"><br>
+        Message:<br>
+        <input id="message" type="text" name="message"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.393429409236!2d-1.0895873340728062!3d51.24866512959349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4874222e15677a4f%3A0x417e178a1851d3e7!2sFujitsu!5e0!3m2!1sen!2suk!4v1579443131121!5m2!1sen!2suk"></iframe>
+    </div>
+  </div>
+</body>
+
+</html>

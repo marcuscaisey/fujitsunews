@@ -19,6 +19,10 @@
           message: messageInput.val()
         }
 
+        if (data.name === "" || data.email === "" || data.message === "") {
+          return false;
+        }
+
         nameInput.val("");
         emailInput.val("");
         messageInput.val("");

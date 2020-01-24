@@ -1,6 +1,7 @@
 import datetime
 
 import flask
+import waitress
 
 app = flask.Flask(__name__)
 
@@ -9,17 +10,15 @@ app = flask.Flask(__name__)
 def contact():
     form = flask.request.form
     header = f"Form submission received at {datetime.datetime.now():%H:%M:%S}"
-    output = f"""
-{header}
+    output = f"""{header}
 {len(header) * '-'}
 name: {form['name']}
 email: {form['email']}
 message: {form['message']}
-
-    """
+"""
     print(output)
     return "", 200
 
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", port=80)
+    waitress.serve(app, host="0.0.0.0", port=80)

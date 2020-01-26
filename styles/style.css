@@ -148,18 +148,16 @@ body {
   font-weight: bold;
 }
 
-#contact-form input,
-#contact-form textarea {
+#contact-form input {
   width: 100%;
 }
 
-#contact-form input[type='text'],
-#contact-form textarea {
+#contact-form input[type='text'] {
   margin: 0.3rem 0 0.9rem;
 }
 
 #message {
-  height: 6rem;
+  padding-bottom: 6rem;
 }
 
 @media (max-width: 917px) {

@@ -159,7 +159,7 @@ body {
 }
 
 #message {
-  padding-bottom: 6rem;
+  height: 6rem;
 }
 
 @media (max-width: 917px) {

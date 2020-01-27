@@ -14,9 +14,9 @@
         let messageInput = $("#contact-form #message");
 
         let data = {
-          name: nameInput.val(),
-          email: emailInput.val(),
-          message: messageInput.val()
+          name: nameInput.val().trim(),
+          email: emailInput.val().trim(),
+          message: messageInput.val().trim()
         }
 
         if (data.name === "" || data.email === "" || data.message === "") {

@@ -14,18 +14,10 @@
         let messageInput = $("#contact-form #message");
 
         let data = {
-          name: nameInput.val().trim(),
-          email: emailInput.val().trim(),
-          message: messageInput.val().trim()
+          name: nameInput.val(),
+          email: emailInput.val(),
+          message: messageInput.val()
         }
-
-        if (data.name === "" || data.email === "" || data.message === "") {
-          return false;
-        }
-
-        nameInput.val("");
-        emailInput.val("");
-        messageInput.val("");
 
         $.post("http://localhost/contact", data, null);
         return false;
